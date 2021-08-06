@@ -1,0 +1,10 @@
+adding custom menu in wp dashboard!!!
+
+function theme_options_panel(){
+  add_menu_page('Theme page title', 'Client Records', 'manage_options', 'theme-options', 'wps_theme_func');
+//   add_submenu_page( 'theme-options', 'Setup 1', 'All Mobiles', 'manage_options', 'theme-op-mobiles', 'wps_all_mobiles');
+}
+add_action('admin_menu', 'theme_options_panel');
+function wps_theme_func(){
+	include("all-records.php");
+}
