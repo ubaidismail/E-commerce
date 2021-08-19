@@ -1,0 +1,23 @@
+/// Hiding any floating button according to screen size
+
+// 	
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+
+  // 20 is an arbitrary number here, just to make you think if you need the prevScrollpos variable:
+  if (currentScrollPos > 14000) {
+    // I am using 'display' instead of 'top':
+    document.getElementById("bounce-arrow").style.display = "none";
+  } else {
+    document.getElementById("bounce-arrow").style.display = "initial";
+  }
+}
+-------------------------------------------------
+<script>
+jQuery(".first").click(function() {
+    jQuery('html,body').animate({
+        scrollTop: jQuery("#office-girl").offset().top},
+        'slow');
+});
+	
+</script>
